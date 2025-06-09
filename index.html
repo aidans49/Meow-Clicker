@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Cursor/Paw/Pointer Reference:https://www.shutterstock.com/image-vector/8-bit-pixel-footprin-paws-vector-1950968527 -->
+  <!--Cat Reference: https://widgetopia.io/widget/pixel-cat-s -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Clicker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section>
+      <div class="game">
+        <div class="stats-container">
+          <div class="mpc">
+            <h3>Meows Per Click</h3>
+            <div class="mpc-value">
+              <strong id="mpcValue">1</strong>
+            </div>
+          </div>
+          <div class="mps">
+            <h3>Meows Per Second</h3>
+            <div class="mps-value">
+              <strong id="mpsValue">0</strong>
+            </div>
+          </div>
+        </div>
+        <div class="left">
+          <div class="cat">
+            <h3>Meow <span id="meowCount">0</span>!</h3>
+            <div class="cat-image-container" onclick="incrementMeow()">
+              <img
+                src="assets/cat.png"
+                alt="Cat Image"
+                class="catImage"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="upgrades-container">
+            <div
+              class="upgrade"
+              data-cost="10"
+              data-effect="click"
+              data-increment="1"
+              id="clickerUpgrade"
+              onclick="updateUpgrade(this.id)"
+            >
+              <div class="upgrade-icon">
+                <img src="assets/paw.png" alt="Clicker" class="upgradeImage" />
+              </div>
+              <div class="upgrade-info">
+                <h4>Clicker</h4>
+                <div class="upgrade-details">
+                  <p>Cost: <span class="cost">10</span></p>
+                  <img
+                    src="assets/cat.png"
+                    alt="Cat Icon"
+                    class="catImage"
+                  />
+                </div>
+              </div>
+              <div class="level">
+                <p>Level: <span class="level-text">0</span></p>
+                <div class="level-information">
+                  <p>
+                    Effect:
+                    <strong
+                      >+<span class="effect-text">1</span> Meow per
+                      click</strong
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="upgrades-container">
+            <div
+              class="upgrade"
+              data-cost="100"
+              data-effect="auto"
+              data-increment="1"
+              id="autoClickUpgrade"
+              onclick="updateUpgrade(this.id)"
+            >
+              <div class="upgrade-icon">
+                <img
+                  src="assets/autoClicker.gif"
+                  alt="Auto Clicker"
+                  class="upgradeImage"
+                />
+              </div>
+              <div class="upgrade-info">
+                <h4>Auto Clicker</h4>
+                <div class="upgrade-details">
+                  <p>Cost: <span class="cost">100</span></p>
+                  <img
+                    src="assets/cat.png"
+                    alt="Cat Icon"
+                    class="catImage"
+                  />
+                </div>
+              </div>
+              <div class="level">
+                <p>Level: <span class="level-text">0</span></p>
+                <div class="level-information">
+                  <p>
+                    Effect:
+                    <strong
+                      >+<span class="effect-text">1</span> Meow per
+                      second</strong
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="upgrades-container">
+            <div
+              class="upgrade"
+              data-cost="1000"
+              data-effect="auto"
+              data-increment="100"
+              id="catMinerUpgrade"
+              onclick="updateUpgrade(this.id)"
+            >
+              <div class="upgrade-icon">
+                <img
+                  src="assets/catMiner.gif"
+                  alt="Cat Miner"
+                  class="upgradeImage"
+                  id="catMinerImage"
+                />
+              </div>
+              <div class="upgrade-info">
+                <h4>Cat Miner</h4>
+                <div class="upgrade-details">
+                  <p>Cost: <span class="cost">1000</span></p>
+                  <img
+                    src="assets/cat.png"
+                    alt="Cat Icon"
+                    class="catImage"
+                  />
+                </div>
+              </div>
+              <div class="level">
+                <p>Level: <span class="level-text">0</span></p>
+                <div class="level-information">
+                  <p>
+                    Effect:
+                    <strong
+                      >+<span class="effect-text">10</span> Meow per
+                      second</strong
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="script.js"></script>
+    </section>
+  </body>
+</html>
